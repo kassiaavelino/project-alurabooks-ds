@@ -3,7 +3,7 @@ import React from "react"
 import styled from "styled-components";
 
 export interface TagProps {
-    texto: string
+    text: string
 }
 
 const TagStyled = styled.div`
@@ -16,10 +16,10 @@ const TagStyled = styled.div`
     font-family: sans-serif;
 `
 
-export const Tag = ({ texto }: TagProps) => {
+export const Tag = ({ text }: TagProps) => {
     return (
         <TagStyled>
-            {texto}
+            {text}
         </TagStyled>
     )
 }

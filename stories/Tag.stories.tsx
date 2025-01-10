@@ -12,5 +12,5 @@ const Template: ComponentStory<typeof Tag> = (args) => <Tag {...args}/>
 export const Primario = Template.bind({})
 
 Primario.args = {
-    texto: 'Tag'
+    text: 'Tag'
 } as TagProps
