@@ -32,17 +32,13 @@ export interface TextFieldProps {
     onChange: (value: string) => void
 }
 
-export const TextField = ({ label, value, onChange, type = 'text' }: TextFieldProps) => {
-    const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-        onChange(event.target.value);
-    };
-
+export const TextField = ({ label, value, onChange, type = 'text' } : TextFieldProps) => {
     return (
         <div>
             <StyledLabel>
                 {label}
             </StyledLabel>
-            <StyledInput type={type} value={value} onChange={handleChange} />
+            <StyledInput type={type} value={value} onChange={event => onChange(event.target.value)}/>
         </div>
     )
 }
